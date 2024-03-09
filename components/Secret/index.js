@@ -9,9 +9,7 @@ const endpointLinkSecret = `${endpoint}/en/p`
 export default function Secret() {
 
   function generateSecret(length = 16) {
-    var keys = 'abcdefghijklmnopqrstuvwxyz';
-    keys += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    keys += '0123456789';
+    var keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var result = '';
   
     for(var i = 1; i <= length; i++) {
