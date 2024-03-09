@@ -8,7 +8,7 @@ const endpointLinkSecret = `${endpoint}/en/p`
 
 export default function Secret() {
 
-  function generateSecret(length = 16) {
+  function generateSecret(length = 24) {
     var keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var result = '';
   
@@ -40,8 +40,8 @@ export default function Secret() {
     const payload = {
      password: {
       payload: secret,
-      expire_after_days: 1,
-      expire_after_views: 10
+      expire_after_days: 7,
+      expire_after_views: 1
      }
     };
 
