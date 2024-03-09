@@ -67,14 +67,6 @@ export default function Secret() {
               onClick={handleCreateSecretLink}>Share Secret
             </button>
           </p>
-          <span className={styles.logo}>
-          <img
-            src="icons/icon16-github.png"
-            alt="Logo"
-            width={16}
-            height={16}
-          />
-        </span>
         <h1 className={styles.code} >{secretLink}</h1>
         <p className={styles.description}>Notice: do not open link because it's available only for one open</p>
     </>
