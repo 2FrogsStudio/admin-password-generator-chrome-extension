@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import styles from '../../styles/Pages.module.css';
+import CopyToClipboardButton from '../CopyToClipboardButton';
+
 
 const endpoint = 'https://pwpush.com'
 const endpointCreateSecret = `${endpoint}/p.json`
@@ -56,7 +58,9 @@ export default function Secret() {
 
   return (
     <>
-        <h1 className={styles.code}>{secret}</h1>
+        <h1 className={styles.code}>{secret} &nbsp;
+          <CopyToClipboardButton text={secret} />
+        </h1>
         <p>
             <button 
               className={styles.buttonCreateSecret} 
@@ -66,8 +70,10 @@ export default function Secret() {
               className={styles.buttonShareSecret} 
               onClick={handleCreateSecretLink}>Share Secret
             </button>
-          </p>
-        <h1 className={styles.code} >{secretLink}</h1>
+        </p>
+        <h1 className={styles.code}>{secretLink} &nbsp; 
+          <CopyToClipboardButton text={secretLink} />
+        </h1>
         <p className={styles.description}>Notice: do not open link because it's available only for one open</p>
     </>
   );
