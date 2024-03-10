@@ -3,6 +3,8 @@ import axios from 'axios';
 import styles from '../../styles/Pages.module.css';
 import CopyToClipboardButton from '../CopyToClipboardButton';
 
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+
 
 const endpoint = 'https://pwpush.com'
 const endpointCreateSecret = `${endpoint}/p.json`
@@ -33,8 +35,8 @@ export default function Secret() {
   }
 
   // Function to handle button click
-  const handleCreateSecret = () => {
-    setSecret(generateSecret());
+  const handleCreateSecret = (length) => {
+    setSecret(generateSecret(length));
     setSecretLink(secretLinkInitState);
   };
 
@@ -66,10 +68,18 @@ export default function Secret() {
           <CopyToClipboardButton text={secret} />
         </h1>
         <p>
-            <button 
-              className={styles.buttonCreateSecret} 
-              onClick={handleCreateSecret}>Create Secret
-            </button>&nbsp;&#x2192;&nbsp;
+        <Dropdown>
+          <DropdownTrigger>
+            <Button className={styles.buttonCreateSecret} variant="bordered">
+              Create Secret
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Static Actions">
+            <DropdownItem className={`${styles.buttonCreateSecret} ${styles.buttonCreateSecretWeak}`} onClick={(length) => handleCreateSecret(8)}>length 8</DropdownItem>
+            <DropdownItem className={`${styles.buttonCreateSecret} ${styles.buttonCreateSecretMiddle}`}  onClick={(length) => handleCreateSecret(16)}>length 16</DropdownItem>
+            <DropdownItem className={`${styles.buttonCreateSecret} ${styles.buttonCreateSecretStrong}`}  onClick={(length) => handleCreateSecret(24)}>length 24</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>&nbsp;&#x2192;&nbsp;
             <button 
               className={styles.buttonShareSecret} 
               onClick={handleCreateSecretLink}>Share Secret
@@ -79,6 +89,7 @@ export default function Secret() {
           <CopyToClipboardButton text={secretLink} />
         </h1>
         <p className={styles.description}>Notice: do not open link because it's available only for one open</p>
+
     </>
   );
 }

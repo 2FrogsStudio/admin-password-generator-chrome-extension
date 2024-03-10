@@ -98,3 +98,15 @@
 .buttonCopyToClipboardDefault {
   background-color: #cbc3c310;
 }
+
+.buttonCreateSecretWeak {
+  background-color: #d8776b;
+}
+
+.buttonCreateSecretMiddle {
+  background-color: #e0e468;
+}
+
+.buttonCreateSecretStrong {
+  background-color: #2ea44f;
+}
