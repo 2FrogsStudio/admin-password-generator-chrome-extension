@@ -1,5 +1,5 @@
 .container {
-  width: 420;
+  width: 430;
   height: 385px;
   background: linear-gradient(153deg, rgb(116, 56, 216), rgb(18, 150, 170) 74%);
   padding: 5px;
@@ -7,7 +7,7 @@
 }
 
 .main {
-  width: 410px;
+  width: 420px;
   height: 375px;
   display: flex;
   flex-direction: column;
