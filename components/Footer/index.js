@@ -33,9 +33,6 @@ export default function Footer() {
         </span>
         Feedback
       </a>
-
-
-      
     </footer>
   );
 }
