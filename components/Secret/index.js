@@ -21,9 +21,12 @@ export default function Secret() {
     return result;
   }
 
+  const secretInitState = 'Press the button \'Create Secret\'';
+  const secretLinkInitState = 'Press the button \'Share Secret\'';
+
   // States
-  const [secret, setSecret] = useState('Press the button \'Create Secret\'');
-  const [secretLink, setSecretLink] = useState('Press the button \'Share Secret\'');
+  const [secret, setSecret] = useState(secretInitState);
+  const [secretLink, setSecretLink] = useState(secretLinkInitState);
 
   const setSecretLinkWithDomain = (url_token) => {
     setSecretLink (`${endpointLinkSecret}/${url_token}`)
@@ -32,6 +35,7 @@ export default function Secret() {
   // Function to handle button click
   const handleCreateSecret = () => {
     setSecret(generateSecret());
+    setSecretLink(secretLinkInitState);
   };
 
   const handleCreateSecretLink = () => {
