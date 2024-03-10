@@ -8,7 +8,6 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub
         <span className={styles.logo}>
           <img
             src="icons/icon16-github.png"
@@ -17,7 +16,26 @@ export default function Footer() {
             height={16}
           />
         </span>
+        GitHub
       </a>
+      <a
+        href="https://chromewebstore.google.com/detail/admin-password-generator/phangnjfpipgeomgnakfhjeepnnadbob"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className={styles.logo}>
+          <img
+            src="icons/icon64-chromewebstore.png"
+            alt="Logo"
+            width={16}
+            height={16}
+          />
+        </span>
+        Feedback
+      </a>
+
+
+      
     </footer>
   );
 }
