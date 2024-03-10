@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Admin Password Generator",
   "short_name": "A-P-G",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Admin Password Generator Chrome Extension, https://github.com/2FrogsStudio/admin-password-generator-chrome-extension",
   "icons": {
     "16": "/icons/icon16.png",
