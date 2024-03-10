@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Admin Password Generator",
   "short_name": "admin-password-generator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Allows you to create and share random passwords that are highly secure and extremely difficult to crack or guess.",
   "icons": {
     "16": "/icons/icon16.png",
