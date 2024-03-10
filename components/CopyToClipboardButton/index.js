@@ -13,11 +13,13 @@ const CopyToClipboardButton = ({ text }) => {
     } catch (error) {
       console.error('Failed to copy text to clipboard', error);
     }
+    await new Promise(r => setTimeout(r, 150));
+    setIsCopied(false);
   };
 
   return (
     <>
-      <button className={styles.buttonCopyToClipboard}  onClick={handleCopyClick}>📋</button>
+      <button className={`${styles.buttonCopyToClipboard} ${isCopied ? styles.buttonCopyToClipboardSuccess : styles.buttonCopyToClipboardDefault}` } onClick={handleCopyClick}>📋</button>
     </>
   );
 };
