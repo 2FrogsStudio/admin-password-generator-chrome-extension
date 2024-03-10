@@ -10,7 +10,7 @@ export default function Footer() {
       >
         <span className={styles.logo}>
           <img
-            src="icons/icon16-github.png"
+            src="icons/icon48-github.png"
             alt="Logo"
             width={16}
             height={16}

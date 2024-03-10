@@ -7,8 +7,7 @@ export default function Index({ navigateToPage }) {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-        Admin Password Generator</h1>
+        <h1 className={styles.title}>Admin Password Generator</h1>
         <Secret ></Secret>
       </main>
     </div>
